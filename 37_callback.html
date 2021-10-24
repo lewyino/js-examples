@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="./">index</a></p>
+    <script type="application/javascript">
+        function test(callback) {
+            console.log("--------");
+            callback();
+            console.log("--------");
+        }
+        test(function() {
+            console.error("błąd!");
+        });
+
+        function uruchomAlboNie(param, callback) {
+            if (param > 10) {
+                callback(param);
+            }
+        }
+
+        uruchomAlboNie(5, function(param) {
+            console.log('callback1', param);
+        });
+
+        uruchomAlboNie(15, function(param) {
+            console.log('callback2', param);
+        });
+    </script>
+</body>
+</html>

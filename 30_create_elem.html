@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="./">index</a></p>
+    <div id="tytul"></div>
+    <script type="application/javascript">
+        var element = document.createElement("span");
+        element.style.color = "red"
+        element.style.fontSize = "10px";
+        element.innerText = "czerwony tytuł";
+
+        console.log(element);
+
+        var title = document.querySelector("#tytul");
+        title.appendChild(element);
+    </script>
+</body>
+</html>

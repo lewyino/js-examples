@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="./">index</a></p>
+    <script type="application/javascript">
+        var promise = new Promise((resolve, reject) => {
+            var rand = Math.random();
+            if (rand > 0.5) {
+                resolve(rand);
+            }
+            reject(rand);
+        });
+
+        promise
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    </script>
+</body>
+</html>
