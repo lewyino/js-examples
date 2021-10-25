@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="./">index</a></p>
+    <div class="data"></div>
+    <script type="application/javascript">
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            console.log(xhttp.responseText);
+            document.querySelector('.data').innerText = xhttp.responseText;
+        }
+        xhttp.open("GET", "40_data.txt");
+        xhttp.send();
+    </script>
+</body>
+</html>

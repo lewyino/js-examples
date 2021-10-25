@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <p><a href="./">index</a></p>
+    <div class="data"></div>
+    <script type="application/javascript">
+        axios.get("https://random-data-api.com/api/users/random_user?size=10")
+            .then(function(response) {
+                console.log(response);
+            });
+
+        // napisać skrypt który skorzysta z random-data-api.com w celu pobrania danych o użytkownikach
+        // i wyświetli je w formie tabeli
+    </script>
+</body>
+</html>
