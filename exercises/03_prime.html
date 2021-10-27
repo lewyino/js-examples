@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="..">index</a></p>
+    <script type="application/javascript">
+        var liczba = Number(prompt("podaj liczbę większą od 0"));
+        if (isNaN(liczba)) {
+            console.error("niepoprawna liczba");
+        } else {
+            var parzyste = [];
+            var counter = 2;
+            while (counter < liczba) {
+                if (counter % 2 === 0) {
+                    parzyste.push(counter);
+                }
+                counter++;
+            }
+            console.log("ilość liczb parzystych:", parzyste.length);
+            console.log("liczby parzyste:", parzyste);
+        }
+    </script>
+</body>
+</html>

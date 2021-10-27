@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="..">index</a></p>
+    <template id="simpleTemplate">
+        <div class="card">
+            <div class="title"></div>
+            <div class="content"></div>
+            <button type="button">Usuń</button>
+        </div>
+    </template>
+    <button id="addCardButton">Dodaj element</button>
+    <script type="application/javascript">
+        function deleteCard(event) {
+            document.body.removeChild(event.target.parentNode);
+        }
+
+        function addCard() {
+            var template = document.querySelector("#simpleTemplate");
+            var clone = template.content.cloneNode(true);
+            clone.querySelector(".title").textContent = "title";
+            clone.querySelector(".content").textContent = "content";
+            var button = clone.querySelector("button");
+            button.style.display = 'none';
+            var card = clone.querySelector(".card");
+            card.addEventListener("mouseenter", function (event) {
+                console.log('mouse enter');
+                var button = event.target.querySelector("button");
+                button.style.display = 'initial';
+            });
+            card.addEventListener("mouseleave", function (event) {
+                console.log('mouse leave');
+                var button = event.target.querySelector("button");
+                button.style.display = 'none';
+            });
+            button.addEventListener("click", deleteCard);
+            document.body.appendChild(clone);
+        }
+        
+        var addCardButton = document.querySelector("#addCardButton");
+        addCardButton.addEventListener("click", addCard);
+    </script>
+</body>
+</html>

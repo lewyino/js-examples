@@ -1,0 +1,61 @@
+body {
+    font-family: Arial;
+}
+
+.wrapper {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+
+.wrapper .todo-list-wrapper {
+    display: flex;
+}
+
+.wrapper .todo-list-wrapper .todo-list {
+    flex: 1;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.wrapper .todo-list-wrapper .todo-list h3 {
+    text-align: center;
+}
+
+.wrapper .todo-list-wrapper .todo-list .card {
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 5px;
+    margin: 5px;
+}
+
+.wrapper .todo-list-wrapper .todo-list .card .title {
+    margin-bottom: 5px;
+}
+
+.wrapper .todo-list-wrapper .todo {
+    border: 1px solid red;
+}
+
+.wrapper .todo-list-wrapper .in-progress {
+    border: 1px solid #ffbb00;
+}
+
+.wrapper .todo-list-wrapper .done {
+    border: 1px solid green;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px 5px 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000000;
+}
+
+.form input {
+    width: 400px;
+}

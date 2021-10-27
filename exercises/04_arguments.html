@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="..">index</a></p>
+    <script type="application/javascript">
+        function myFunction() {
+            var sum = 0;
+            for (var i in arguments) {
+                if (typeof arguments[i] === 'number') {
+                    sum += arguments[i];
+                }
+            }
+            console.log("suma", sum);
+
+            sum = 1;
+            for (var i in arguments) {
+                sum *= arguments[i];
+            }
+            console.log("iloczyn", sum);
+        }
+    </script>
+</body>
+</html>

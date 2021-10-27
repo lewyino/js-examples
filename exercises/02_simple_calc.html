@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="..">index</a></p>
+    <script type="application/javascript">
+        var liczba1 = Number(prompt("podaj pierwszą liczbę"));
+        var liczba2 = Number(prompt("podaj drugą liczbę"));
+        if (isNaN(liczba1) || isNaN(liczba2)) {
+            alert("nie podałeś poprawnych liczb");
+        } else {
+            var operacja = prompt("co chcesz zrobić? + - * /");
+            switch (operacja) {
+                case '+': alert(liczba1 + liczba2); break;
+                case '-': alert(liczba1 - liczba2); break;
+                case '*': alert(liczba1 * liczba2); break;
+                case '/': alert(liczba1 / liczba2); break;
+                default: alert("nieznana operacja");
+            }
+        }
+    </script>
+</body>
+</html>

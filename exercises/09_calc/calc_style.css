@@ -1,0 +1,31 @@
+.wrapper {
+    margin: 5px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper > div {
+    margin: 5px 0;
+}
+
+.wrapper .buttons {
+    display: flex;
+}
+
+.wrapper .buttons .number-buttons > div {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    margin: 1px 0;
+}
+
+.wrapper .buttons .number-buttons > div:not(:first-child) {
+    margin-top: 3px;
+}
+
+.wrapper .buttons .action-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}

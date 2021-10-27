@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="..">index</a></p>
+    <script type="application/javascript">
+        var liczba1 = Number(prompt("podaj pierwszą liczbę"));
+        var liczba2 = Number(prompt("podaj drugą liczbę"));
+        if (isNaN(liczba1) || isNaN(liczba2)) {
+            alert("nie podałeś poprawnych liczb");
+        } else {
+            if (liczba1 === liczba2) {
+                alert("liczby są równe")
+            } else if (liczba1 > liczba2) {
+                alert("pierwsza liczba jest większa od drugie");
+            } else {
+                alert("pierwsza liczba nie jest większa od drugie");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO list</title>
+    <link rel="stylesheet" href="todo_style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <template id="todoCardTemplate">
+        <div class="card">
+            <div class="title"></div>
+            <button name="button1"></button>
+            <button name="button2"></button>
+            <button name="remove">Usuń</button>
+        </div>
+    </template>
+
+    <div class="wrapper">
+        <div class="form">
+            <span>Add task:</span>
+            <form id="add-card-form">
+                <input name="title" type="text">
+                <select name="type">
+                    <option value="todo">todo</option>
+                    <option value="in_progress">in progress</option>
+                    <option value="done">done</option>
+                </select>
+                <button type="submit">Dodaj!</button>
+            </form>
+        </div>
+        <div class="todo-list-wrapper">
+            <div class="todo-list todo">
+                <h3>TODO</h3>
+            </div>
+            <div class="todo-list in-progress">
+                <h3>IN PROGRESS</h3>
+            </div>
+            <div class="todo-list done">
+                <h3>DONE</h3>
+            </div>
+        </div>
+    </div>
+    <script src="todo_script.js"></script>
+</body>
+</html>

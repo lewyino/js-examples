@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <div class="data"></div>
+    <script type="application/javascript">
+        axios.get("https://random-data-api.com/api/users/random_user?size=10")
+            .then(function(response) {
+                if (response.status === 200) {
+                    var data = response.data;
+                    console.log(data);
+                    var dataDiv = document.querySelector(".data");
+                    var table = '<table>';
+                    for (var i = 0; i < data.length; i++) {
+                        var user = data[i];
+                        table += '<tr>';
+                        table += '<td>' + user.uid + '</td>';
+                        table += '<td>' + user.username + '</td>';
+                        table += '<td>' + user.first_name + '</td>';
+                        table += '<td>' + user.last_name + '</td>';
+                        table += '<td>' + user.email + '</td>';
+                        table += '</tr>';
+                    }
+                    table += '</table>';
+                    dataDiv.innerHTML = table;
+                } else {
+                    console.error(response);
+                }
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+
+        // napisać skrypt który skorzysta z random-data-api.com w celu pobrania danych o użytkownikach
+        // i wyświetli je w formie tabeli -> imię, nazwisko, username, email, uuid
+    </script>
+</body>
+</html>

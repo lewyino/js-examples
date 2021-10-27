@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="..">index</a></p>
+    <script type="application/javascript">
+        function przestepny(rok) {
+            if ((rok % 400 === 0) || (rok % 4 === 0 && rok % 100 !== 0)) {
+                return true;
+            }
+            return false;
+        }
+
+        function ileDniWMiesiacu(rok, miesiac) {
+            if (miesiac === 2) {
+                return przestepny(rok) ? 29 : 28;
+            }
+            if (miesiac > 7) {
+                return miesiac % 2 === 0 ? 31 : 30;
+            }
+            return miesiac % 2 === 1 ? 31 : 30;
+        }
+
+        function dzienRoku(rok, miesiac, dzien) {
+            if (miesiac < 1 || miesiac > 12) {
+                return null;
+            }
+            if (dzien < 1 || ileDniWMiesiacu(rok, miesiac) < dzien) {
+                return null;
+            }
+            var dni = dzien;
+            for (var i = 1; i < miesiac; i++) {
+                dni += ileDniWMiesiacu(rok, i);
+            }
+            return dni;
+        }
+
+        console.log(dzienRoku(2000, 1, 1));
+        console.log(dzienRoku(2000, 4, 1));
+        console.log(dzienRoku(2004, 2, 29));
+        console.log(dzienRoku(1900, 2, 29));
+        console.log(dzienRoku(2013, 12, 31));
+        console.log(dzienRoku(2013, 9, 13));
+    </script>
+</body>
+</html>

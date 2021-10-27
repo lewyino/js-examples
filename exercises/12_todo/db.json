@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "title": "zadanie do zrobienia",
+      "type": "todo",
+      "id": 1
+    },
+    {
+      "title": "zadanie zrobione",
+      "type": "done",
+      "id": 2
+    },
+    {
+      "title": "zadanie w trakcie wykonywania",
+      "type": "in_progress",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href="..">index</a></p>
+    <script type="application/javascript">
+        function silnia(n) {
+            if (n === 1) {
+                return 1;
+            }
+            return n * silnia(n - 1);
+        }
+        console.log(silnia(5));
+
+        function fib(n) {
+            if (n === 1 || n === 0) {
+                return 1;
+            }
+            return fib(n - 1) + fib(n - 2);
+        }
+        console.log(fib(3));
+        console.log(fib(5));
+    </script>
+</body>
+</html>

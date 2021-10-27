@@ -1,0 +1,10 @@
+.card {
+    margin: 5px;
+    border: 1px solid #000000;
+    max-width: 200px;
+    display: flex;
+}
+
+.card .data {
+    flex: 1;
+}
