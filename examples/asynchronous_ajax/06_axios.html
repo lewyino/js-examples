@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <div class="data"></div>
+    <script type="application/javascript">
+        axios.get("05_data.json")
+            .then(function(response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+
+        // napisać skrypt który skorzysta z random-data-api.com w celu pobrania danych o użytkownikach
+        // i wyświetli je w formie tabeli -> imię, nazwisko, username, email, uuid
+    </script>
+</body>
+</html>

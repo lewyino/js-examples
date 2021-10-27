@@ -5,16 +5,19 @@
     <title>JavaScript</title>
 </head>
 <body>
-    <p><a href="./">index</a></p>
+    <p><a href=".">index</a></p>
     <script type="application/javascript">
         console.log("1");
-        setTimeout(function() {
+        var i = setInterval(function() {
             console.log("2");
         }, 100);
         setTimeout(function() {
             console.log("3");
-        });
+        }, 0);
         console.log("4");
+        setTimeout(function() {
+            clearInterval(i);
+        }, 1000);
     </script>
 </body>
 </html>
