@@ -1,0 +1,12 @@
+{
+    "name": "js-presentation-examples",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "live-server --port=12345 --ignorePattern=.*\\.json --ignore=node_modules",
+        "json-server": "json-server --watch exercises/11_todo/db.json"
+    },
+    "devDependencies": {
+        "json-server": "^0.17.0",
+        "live-server": "^1.2.1"
+    }
+}

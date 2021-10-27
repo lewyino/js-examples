@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <button id="przycisk">klik!</button>
+    <script type="application/javascript">
+        var przycisk = document.querySelector("#przycisk");
+
+        function obslugaPrzycisku() {
+            alert("kliknęto w przycisk!");
+            przycisk.removeEventListener("click", obslugaPrzycisku);
+        }
+
+        przycisk.addEventListener("click", obslugaPrzycisku);
+
+        przycisk.addEventListener("click", function () {
+            console.log("kliknięto w przycisk!");
+        });
+
+        // napisz program który po kliknięciu w przycisk będzie generował nowy fragment strony
+        // nowy fragment powinien mieć możliwość usunięcia
+    </script>
+</body>
+</html>

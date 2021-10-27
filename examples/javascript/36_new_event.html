@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <div id="pole">
+        <button id="przycisk">klik!</button>
+    </div>
+    <script type="application/javascript">
+        var mojeZdarzenie = new Event("mojeZdarzenie", { bubbles: true });
+        mojeZdarzenie.data = {dane: "dodatkowe dane"};
+        var przycisk = document.querySelector("#przycisk");
+        var pole = document.querySelector("#pole");
+        przycisk.addEventListener("click", function() {
+            this.dispatchEvent(mojeZdarzenie);
+        });
+        pole.addEventListener("mojeZdarzenie", function(event) {
+            console.log("moje zdarzenie!");
+            console.log(event);
+        });
+
+        // zmodyfikować program tworzący nowe elementy w taki sposób aby
+        // komunikacja odbywała się za pomocą zdarzeń
+        // utworzyć zdarzenie do usuwania elementów
+        // wywołać zdarzenie o usunięciu po kliknięciu w przycisk na elemencie
+        // przechwycić zdarzenie o usunięciu i usunąć odpowiedni element
+    </script>
+</body>
+</html>

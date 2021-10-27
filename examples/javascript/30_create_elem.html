@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <div id="notatka">
+        <div class="tytul">Tytuł</div>
+        <div class="opis">Opis</div>
+    </div>
+    <script type="application/javascript">
+        var element = document.createElement("div");
+        element.style.fontSize = "10px";
+        element.innerText = new Date().toDateString();
+
+        console.log(element);
+
+        var notatka = document.querySelector("#notatka");
+        notatka.appendChild(element);
+    </script>
+</body>
+</html>

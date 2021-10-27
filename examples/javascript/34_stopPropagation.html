@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <div id="dziadek">
+        <div id="rodzic">
+            <button id="przycisk">klik!</button>
+        </div>
+    </div>
+    <script type="application/javascript">
+        var dziadek = document.querySelector("#dziadek");
+        dziadek.addEventListener("click", function (event) {
+            console.log("dziadek kliknięty!");
+        });
+        var rodzic = document.querySelector("#rodzic");
+        rodzic.addEventListener("click", function (event) {
+            console.log("rodzic kliknięty!");
+        });
+        var przycisk = document.querySelector("#przycisk");
+        przycisk.addEventListener("click", function (event) {
+            event.stopPropagation();
+            console.log("przycisk kliknięty!");
+        });
+    </script>
+</body>
+</html>

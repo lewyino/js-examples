@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        while (true) {
+            // wykona się raz
+            console.log("jestem w pętli while(true)");
+            break;
+        }
+
+        var i = 5;
+        while (i > 5) {
+            if (i % 2 === 0) {
+                continue;
+            }
+            console.log("i=" + i);
+        }
+
+        // napisać program który wylosuje liczę z przedziału 1-10 (użyj biblioteki Math)
+        // Math.floor(Math.random() * 10)) + 1
+        // zapamięta wylosowaną liczbę
+        // poprosi użytkownika o zgadnięcie liczby (prompt)
+        // okienko z pytaniem o liczbę będzie wyświetlane tak długo aż gracz nie zgadnie liczby
+        // wyświetli informację zakończeniu gry (poprawnej wylosowanej liczbie)
+    </script>
+</body>
+</html>

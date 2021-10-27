@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        function podziel(a, b) {
+            if (b === 0) {
+                return "nie wolno dzielić przez 0";
+            }
+            return a / b;
+        }
+
+        var dodaj = function(a, b) {
+            console.log("dodaj");
+            return a + b;
+        }
+
+        console.log(podziel(1, 0)); // nie wolno dzielić przez 0
+        var result = dodaj(4, 5);
+        console.log(result);
+    </script>
+</body>
+</html>

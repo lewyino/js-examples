@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        var zmienna1 = 1; // zmienna globalna
+
+        function mojaFunkcja() {
+            var zmienna2 = 2; // zmienna dostępna wewnątrz funkcji
+            console.log('zmienna2 fn', zmienna2);  // 2
+        }
+
+        mojaFunkcja();
+
+        console.log(zmienna1); // 1
+        console.log(zmienna2); // error
+    </script>
+</body>
+</html>
