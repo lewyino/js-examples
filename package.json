@@ -6,13 +6,17 @@
         "todo-server": "json-server --watch exercises/12_todo/db.json",
         "babel:exercises": "babel exercises --out-dir dist/exercises --copy-files",
         "babel:examples": "babel examples --out-dir dist/examples --copy-files",
+        "webpack:example40": "webpack --config example40.webpack.config.js",
         "echo": "echo \"Hello world!\""
     },
     "devDependencies": {
         "@babel/cli": "^7.15.7",
         "@babel/core": "^7.15.8",
         "@babel/preset-env": "^7.15.8",
+        "html-webpack-plugin": "^5.5.0",
         "json-server": "^0.17.0",
-        "live-server": "^1.2.1"
+        "live-server": "^1.2.1",
+        "webpack": "^5.60.0",
+        "webpack-cli": "^4.9.1"
     }
 }
