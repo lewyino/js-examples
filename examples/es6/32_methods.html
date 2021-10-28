@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        class Person {
+            constructor(firstname, lastname) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+            }
+
+            show() {
+                return this.firstname + " " + this.lastname;
+            }
+        }
+
+        const p = new Person("Mateusz", "Lewandowski");
+        console.log(p.show()); // Mateusz Lewandowski
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        class Person {
+            firstname = "Mateusz";
+            lastname = "Lewandowski";
+        }
+
+        const p = new Person();
+        console.log(p);
+        console.log("instanceof Person:", p instanceof Person);
+
+        const p2 = {
+            firstname: "Mateusz",
+            lastname: "Lewandowski",
+        }
+        console.log(p2);
+        console.log("instanceof Person:", p2 instanceof Person);
+    </script>
+</body>
+</html>

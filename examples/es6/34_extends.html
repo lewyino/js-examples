@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        class Person {
+            constructor(firstname, lastname) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+            }
+        }
+
+        class Employee extends Person {
+            constructor(firstname, lastname, company) {
+                super(firstname, lastname);
+                this.company = company;
+            }
+        }
+
+        const p = new Employee("Mateusz", "Lewandowski", "Super Firma");
+        console.log(p);
+
+        // napisać skrypt który
+        // posiada klasę Person (pola: imię, nazwisko, wiek, płeć, metodę print)
+        // posiada klasę Student (dziedziczy po Person, dodatkowo zawiera pole z listą ocen)
+        // posiada klasę Pracownik (dziedziczy po Person, dodatkowo zawiera pole z informacją o zarobkach)
+        // klasa Student ponadto wylicza średnią ocen studenta
+        // utworzyć listę 10 obiektów zawierającą wszystkie 3 typy (albo pobrać z random api i przetworzyć)
+        // zwrócić tablice z samymi mężczyznami
+        // policzyć średnią ocen dla wszystkich studentów
+        // wyświetlić pracowników jako imię, nazwisko, pensja
+    </script>
+</body>
+</html>

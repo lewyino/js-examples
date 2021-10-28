@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        class Person {
+            static counter = 0;
+            constructor(firstname, lastname) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                Person.counter++;
+            }
+
+            static hello() {
+                console.log("Cześć, jestem Personem");
+            }
+        }
+
+        Person.hello();
+        console.log(Person.counter);
+    </script>
+</body>
+</html>
