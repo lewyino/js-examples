@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link rel="modulepreload" href="person.js">
+    <link rel="modulepreload" href="employee.js">
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <div id="result"></div>
+    <script type="module">
+        import {Employee} from './employee.js';
+        const p = new Employee("Mateusz", "Lewandowski", "Super Firma");
+        document.querySelector("#result").innerText = JSON.stringify(p);
+    </script>
+</body>
+</html>
