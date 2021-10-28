@@ -3,9 +3,15 @@
     "version": "1.0.0",
     "scripts": {
         "start": "live-server --port=12345 --ignorePattern=.*\\.json --ignore=node_modules",
-        "todo-server": "json-server --watch exercises/12_todo/db.json"
+        "todo-server": "json-server --watch exercises/12_todo/db.json",
+        "babel:exercises": "babel exercises --out-dir dist/exercises --copy-files",
+        "babel:examples": "babel examples --out-dir dist/examples --copy-files",
+        "echo": "echo \"Hello world!\""
     },
     "devDependencies": {
+        "@babel/cli": "^7.15.7",
+        "@babel/core": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
         "json-server": "^0.17.0",
         "live-server": "^1.2.1"
     }
