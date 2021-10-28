@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <div class="data"></div>
+    <script type="application/javascript">
+        function *silnia() {
+            yield 1; // 0!
+            let value = 1;
+            let iter = 1;
+            while (true) {
+                yield value *= iter++;
+            }
+        }
+
+        const silniaIter = silnia();
+        console.log(silniaIter.next());
+        console.log(silniaIter.next());
+        console.log(silniaIter.next());
+        console.log(silniaIter.next());
+        console.log(silniaIter.next());
+        console.log(silniaIter.next());
+
+
+        function *fib() {
+            yield 0;
+            yield 1;
+            let value1 = 0;
+            let value2 = 1;
+            while (true) {
+                const newValue = value1 + value2;
+                value1 = value2;
+                value2 = newValue;
+                yield newValue;
+            }
+        }
+
+        const fibIter = fib();
+        console.log(fibIter.next());
+        console.log(fibIter.next());
+        console.log(fibIter.next());
+        console.log(fibIter.next());
+        console.log(fibIter.next());
+        console.log(fibIter.next());
+        console.log(fibIter.next());
+        console.log(fibIter.next());
+    </script>
+</body>
+</html>
