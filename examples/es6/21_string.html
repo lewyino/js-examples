@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        console.log("Tekst".toUpperCase()); // "TEKST"
+        console.log("Tekst".toLowerCase()); // "tekst"
+
+        var s = "super tekst";
+
+        console.log(s.indexOf("e")); // 3
+        console.log(s.lastIndexOf("e")); // 7
+
+        console.log(s.includes("e")); // true
+
+        console.log(s.startsWith("sup")); // true
+        console.log(s.endsWith("sup")); // false
+
+        console.log(s.substr(0, 5)); // super
+        console.log(s.slice(6, -1)); // teks
+
+        console.log(s.replace("super", "tajny")); // tajny tekst
+
+        const arr = "2000-01-01".split('-'); // ["2000", "01", "01"];
+        console.log(arr.join('/')); // 2000/01/01
+    </script>
+</body>
+</html>

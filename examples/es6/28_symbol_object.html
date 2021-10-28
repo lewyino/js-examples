@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const sym1 = Symbol("test");
+
+        const o = {
+            hello: "Hello world",
+            [sym1]: "wartość pod symbolem",
+        }
+
+        console.log(o.hello); // Hello world
+        console.log(o[sym1]); // wartość pod symbolem
+
+        for (let i in o) {
+            console.log(i); // hello
+        }
+    </script>
+</body>
+</html>

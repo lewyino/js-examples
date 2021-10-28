@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const o = {
+            hello: "Hello world",
+            show() {
+                console.log(this); // { hello: "Hello world", ... }
+                console.log(this.hello); // Hello world
+
+                const test = () => {
+                    console.log(this);
+                }
+                test();
+            }
+        }
+        o.show();
+    </script>
+</body>
+</html>

@@ -11,7 +11,7 @@ form.addEventListener("submit", function (event) {
     var type = event.target.querySelector("select[name=type]").value;
     var task = {
         title,
-        type
+        type,
     };
     addTask(task);
 });
@@ -93,7 +93,6 @@ function removeTask(task) {
 function editTask(task) {
     axios.put("http://localhost:3000/tasks/" + task.id, task)
         .then(function(response) {
-            console.log(response);
             if (response.status === 200) {
                 removeCard(task);
                 addCard(task);

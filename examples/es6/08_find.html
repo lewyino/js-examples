@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const arr = [
+            {id: 1, firstname: "Mateusz", lastname: "Lewandowski"},
+            {id: 2, firstname: "Jan", lastname: "Kowalski"},
+            {id: 3, firstname: "Mateusz", lastname: "Kowalski"},
+            {id: 3, firstname: "Zbigniew", lastname: "Nowak"},
+        ];
+
+        const find = arr.find((elem) => elem.lastname === 'Kowalski'); // {id: 2, firstname: "Jan", lastname: "Kowalski"}
+        console.log(find);
+    </script>
+</body>
+</html>

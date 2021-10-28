@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const user = {
+            name: 'lewyino',
+            address: {
+                city: 'Poznań',
+            }
+        };
+
+        const userCopy = JSON.parse(JSON.stringify(user));
+        userCopy.address.city = 'Warszawa';
+
+        console.log(user.address.city); // Poznań
+        console.log(userCopy.address.city); // Warszawa
+    </script>
+</body>
+</html>

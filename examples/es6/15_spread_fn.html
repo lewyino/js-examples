@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        function show(user) {
+            console.log(user.firstname + " " + user.lastname + " (" + user.age + ")");
+        }
+
+        const user = {
+            firstname: "Mateusz",
+            lastname: "Lewandowski",
+            age: 18,
+            email: "mateusz.lewandowski@gmail.com",
+        }
+        show(user); // Mateusz Lewandowski (18)
+
+        function showNew({firstname, lastname, age}) {
+            console.log(firstname + " " + lastname + " (" + age + ")");
+        }
+        showNew(user); // Mateusz Lewandowski (18)
+    </script>
+</body>
+</html>

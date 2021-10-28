@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        function *myGenerator() {
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+
+        const iter = myGenerator();
+        console.log(iter.next()); // { value: 1, done: false }
+        console.log(iter.next()); // { value: 2, done: false }
+        console.log(iter.next()); // { value: 3, done: false }
+        console.log(iter.next()); // { value: undefined, done: true }
+
+        for (let i of myGenerator()) {
+            console.log(i);
+        }
+
+        // napisać skrypt który za pomocą generatorów będzie podawał kolejne elementy
+        // dla silni i z ciągu fibonacciego
+    </script>
+</body>
+</html>

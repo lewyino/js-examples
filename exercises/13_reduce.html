@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <div class="data"></div>
+    <script type="application/javascript">
+        const filterAndMapUser = (prev, curr) => {
+            const age = Number(curr.date_of_birth.split('-')[0]);
+            if (new Date().getFullYear() - age > 30) {
+                prev.push({
+                    uid: curr.uid, 
+                    username: curr.username,
+                    first_name: curr.first_name,
+                    last_name: curr.last_name,
+                    email: curr.email,
+                    age,
+                });
+            }
+            return prev;
+        }
+
+        axios.get("https://random-data-api.com/api/users/random_user?size=30")
+            .then(function(response) {
+                const data = response.data;
+                console.log('pobrano uzytkownikow:', data.length);
+                const users = data.reduce(filterAndMapUser, []);
+                console.log('wyswietlono uzytkownikow:', users. length);
+                const dataDiv = document.querySelector(".data");
+                let table = '<table>';
+                for (let i = 0; i < users.length; i++) {
+                    const user = users[i];
+                    table += '<tr>';
+                    table += '<td>' + user.uid + '</td>';
+                    table += '<td>' + user.username + '</td>';
+                    table += '<td>' + user.first_name + '</td>';
+                    table += '<td>' + user.last_name + '</td>';
+                    table += '<td>' + user.email + '</td>';
+                    table += '<td>' + user.age + '</td>';
+                    table += '</tr>';
+                }
+                table += '</table>';
+                dataDiv.innerHTML = table;
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const user = {
+            firstname: "Mateusz",
+            lastname: "Lewandowski",
+        }
+
+        // for (let i of user) { } // error
+        for (let i of Object.values(user)) {
+            console.log(i); // Mateusz, Lewandowski
+        }
+        for (let i of Object.keys(user)) {
+            console.log(i); // firstname, lastname
+        }
+        for (let i of Object.entries(user)) {
+            console.log(i); // [firstname, Mateusz], [lastname, Lewandowski]
+        }
+    </script>
+</body>
+</html>

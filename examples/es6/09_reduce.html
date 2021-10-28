@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const arr = [1, 2, 3];
+
+        const fn = (prev, curr) => {
+            console.log(prev);
+            return prev + curr;
+        }
+
+        const sum = arr.reduce(fn);
+        // prev: 1, curr: 2 => 3
+        // prev: 3, curr: 3 => 6
+        console.log(sum); // 6
+
+        // napisać skrypt który pobierze dane z serwera random-data-api.com o użytkownikach
+        // wyfiltruje użytkowników którzy którzy są starsi niż 30 lat (rocznikowo)
+        // wyniki zwróci w postaci -> imie, nazwisko, uid, username, email, wiek (ile lat, rocznikowo)
+    </script>
+</body>
+</html>

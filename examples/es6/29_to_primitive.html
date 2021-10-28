@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const o1 = {
+            hello: "Hello world",
+        }
+
+        const o2 = {
+            hello: "Hello world",
+            [Symbol.toPrimitive]() {
+                return "mój obiekt"
+            }
+        }
+
+        console.log(o1 + ""); // [object Object]]
+        console.log(o2 + ""); // mój obiekt
+    </script>
+</body>
+</html>

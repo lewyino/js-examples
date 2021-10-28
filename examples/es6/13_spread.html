@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const o = {
+            prop1: 'Hello world',
+            prop2: 'Witaj świecie',
+        };
+
+        const { prop1, prop2 } = { ...o };
+        console.log(prop1);
+        console.log(prop2);
+    </script>
+</body>
+</html>

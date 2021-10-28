@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const arr = [1, 2, 3, 4];
+        const [first, ...rest] = arr;
+        console.log(first);
+        console.log(rest);
+
+        const user = {
+            firstname: "Mateusz",
+            lastname: "Lewandowski"
+        };
+        const { firstname, ...restObj } = user;
+        console.log(firstname);
+        console.log(restObj);
+
+        function show({firstname, ...rest}) {
+            console.log(firstname);
+            console.log(rest);
+        }
+        show(user);
+    </script>
+</body>
+</html>

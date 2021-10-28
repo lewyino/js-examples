@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const arr = [1, 2, 3];
+
+        for (let elem of arr) {
+            console.log(elem); // 1 ... 2 ... 3
+        }
+
+        const iter = arr[Symbol.iterator]();
+        console.log(iter.next()); // { value: 1, done: false }
+        console.log(iter.next()); // { value: 2, done: false }
+        console.log(iter.next()); // { value: 3, done: false }
+        console.log(iter.next()); // { value: undefined, done: true }
+    </script>
+</body>
+</html>
