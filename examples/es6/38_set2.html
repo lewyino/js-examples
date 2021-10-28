@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const set = new Set();
+        set.add("Mateusz");
+        set.add("Lewandowski");
+
+        console.log(set.has("Mateusz")); // true
+
+        console.log(set.size); // 2
+
+        set.delete("Mateusz");
+        console.log(set.size); // 1
+
+        set.clear();
+        console.log(set.size); // 0
+
+        const arr = [1, 2, 3, 4, 5, 6, 2];
+        console.log(arr);
+        const set2 = new Set(arr);
+        console.log(set2);
+    </script>
+</body>
+</html>

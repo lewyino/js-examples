@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const map = new Map();
+        map.set("firstname", "Mateusz"); // dodanie wartości
+        map.set("lastname", "Lewandowski");
+
+        console.log(map.has("firstname")); // true
+
+        console.log(map.get("firstname")); // Mateusz
+
+        console.log(map.size); // 2
+
+        map.delete("firstname");
+        console.log(map.size); // 1
+
+        map.clear();
+        console.log(map.size); // 0
+    </script>
+</body>
+</html>

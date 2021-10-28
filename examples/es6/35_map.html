@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        let o = {};
+        const map = new Map();
+        map.set("firstname", "Mateusz");
+        map.set("lastname", "Lewandowski");
+        map.set(1, 2);
+        map.set(true, false);
+        map.set(o, {});
+
+        console.log(map);
+
+        for (let m of map) {
+            console.log(m);
+        }
+    </script>
+</body>
+</html>

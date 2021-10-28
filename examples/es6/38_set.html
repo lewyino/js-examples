@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        const set = new Set();
+        set.add("Mateusz");
+        set.add("Lewandowski");
+        set.add(1);
+        console.log(set.size); // 3
+        set.add(1);
+        console.log(set.size); // 3
+
+        console.log(set);
+
+        for (let s of set) {
+            console.log(s);
+        }
+    </script>
+</body>
+</html>

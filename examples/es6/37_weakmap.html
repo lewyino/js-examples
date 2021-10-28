@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <script type="application/javascript">
+        let o = {};
+        const map = new WeakMap();
+        map.set(o, "Mateusz");
+        map.set(o, "Lewandowski");
+        console.log(map.get(o));
+        console.log(map.has(o));
+        o = null;
+        console.log(map.has(o));
+        console.log(map);
+        map.
+    </script>
+</body>
+</html>
