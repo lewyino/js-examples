@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <p><a href=".">index</a></p>
+    <div class="data"></div>
+    <script type="application/javascript">
+        class Person {
+            #firstname;
+            #lastname;
+
+            constructor(firstname, lastname) {
+                this.#firstname = firstname;
+                this.#lastname = lastname;
+            }
+
+            get firstname() {
+                return this.#firstname[0].toUpperCase() + this.#firstname.substr(1).toLowerCase();
+            }
+
+            set firstname(name) {
+                this.#firstname = name;
+            }
+
+            get lastname() {
+                return this.#lastname[0].toUpperCase() + this.#lastname.substr(1).toLowerCase();
+            }
+
+            set lastname(name) {
+                this.#lastname = name;
+            }
+
+            print() {
+                console.log(`[${this.constructor.name}] ${this.firstname} ${this.lastname}`);
+            }
+        }
+
+        let p = new Person("mateusz", "LEWANDOWSKI");
+        p.print();
+        console.log(p.lastname);
+        // console.log(p.#lastname); // error
+
+    </script>
+</body>
+</html>
