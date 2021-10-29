@@ -6,7 +6,7 @@
         "todo-server": "json-server --watch exercises/12_todo/db.json",
         "babel:exercises": "babel exercises --out-dir dist/exercises --copy-files",
         "babel:examples": "babel examples --out-dir dist/examples --copy-files",
-        "webpack:example40": "webpack --config example40.webpack.config.js",
+        "webpack:example44": "webpack --config example44.webpack.config.js",
         "test": "jest",
         "echo": "echo \"Hello world!\""
     },

@@ -1,9 +1,12 @@
 import {add, diff, multi, div} from './math';
 
-describe('math functions', () => {
-    describe('add', () => {
-        test('should add two numbers', () => {
+describe('math module', () => {
+    describe('add function', () => {
+        it('should add two numbers', () => {
             expect(add(2, 3)).toEqual(5);
+        });
+        it('should concat strings', () => {
+            expect(add("3", "4")).toEqual("34");
         });
     });
     describe('diff', () => {
@@ -16,7 +19,7 @@ describe('math functions', () => {
             expect(multi(3, 2)).toEqual(6);
         });
     });
-    describe('div', () => {
+    fdescribe('div', () => {
         test('should div two numbers', () => {
             expect(div(3, 2)).toEqual(1.5);
         });
