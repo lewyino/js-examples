@@ -10,7 +10,7 @@
     <div class="data"></div>
     <script type="application/javascript">
         const filterAndMapUser = (prev, curr) => {
-            const age = Number(curr.date_of_birth.split('-')[0]);
+            const age = Number(curr.date_of_birth.split('-')[0]); // 2000-01-01 => [2000, 01, 01]
             if (new Date().getFullYear() - age > 30) {
                 prev.push({
                     uid: curr.uid, 
@@ -18,7 +18,7 @@
                     first_name: curr.first_name,
                     last_name: curr.last_name,
                     email: curr.email,
-                    age,
+                    age: new Date().getFullYear() - age,
                 });
             }
             return prev;

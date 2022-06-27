@@ -9,19 +9,18 @@
     <script type="application/javascript">
         function myFunction() {
             var sum = 0;
+            var sum2 = 1;
             for (var i in arguments) {
                 if (typeof arguments[i] === 'number') {
                     sum += arguments[i];
+                    sum2 *= arguments[i];
                 }
             }
             console.log("suma", sum);
-
-            sum = 1;
-            for (var i in arguments) {
-                sum *= arguments[i];
-            }
-            console.log("iloczyn", sum);
+            console.log("iloczyn", sum2);
         }
+
+        myFunction(1, 2, 3, 4, "5");
     </script>
 </body>
 </html>
