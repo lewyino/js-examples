@@ -6,9 +6,13 @@
 </head>
 <body>
     <p><a href=".">index</a></p>
+
     <button id="przycisk">klik!</button>
+    <div id="console"></div>
+
     <script type="application/javascript">
         var przycisk = document.querySelector("#przycisk");
+        var cons = document.querySelector('#console');
 
         function obslugaPrzycisku() {
             alert("kliknęto w przycisk!");
@@ -19,6 +23,7 @@
 
         przycisk.addEventListener("click", function () {
             console.log("kliknięto w przycisk!");
+            cons.innerHTML = cons.innerHTML + '<div>kliknięto w przycisk!</div>';
         });
 
         // napisz program który po kliknięciu w przycisk będzie generował nowy fragment strony

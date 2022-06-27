@@ -8,11 +8,16 @@
     <p><a href=".">index</a></p>
     <script type="application/javascript">
         function myFunction(a, b) {
-            console.log("jestem w funkcji!");
-            console.log(a + " + " + b + " = " + (a + b));
+            if (typeof a !== 'number' || typeof b !== 'number') {
+                console.error('przekazane argumenty muszą być liczbami!');
+            } else {
+                console.log("jestem w funkcji!");
+                console.log(a + " + " + b + " = " + (a + b));
+            }
         }
 
         myFunction(4, 5);
+        myFunction(3, "18");
     </script>
 </body>
 </html>

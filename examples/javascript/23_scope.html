@@ -10,8 +10,16 @@
         var zmienna1 = 1; // zmienna globalna
 
         function mojaFunkcja() {
+            // hoisting zmienna2
+            // var i;
+            console.log('zmienna2 fn', zmienna2);  // undefined
             var zmienna2 = 2; // zmienna dostępna wewnątrz funkcji
             console.log('zmienna2 fn', zmienna2);  // 2
+
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            console.log('po petli', i);
         }
 
         mojaFunkcja();
